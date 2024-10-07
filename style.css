@@ -27,10 +27,16 @@ h1 {
 #fileInput {
     display: block;
     margin: 20px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 1px solid #007bff;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+#fileInput:focus {
+    border-color: #0056b3;
+    outline: none;
 }
 
 #rotasContainer {
@@ -40,11 +46,23 @@ h1 {
     gap: 20px;
 }
 
-.route-item {
-    padding: 20px;
+.prefix-container {
+    border: 1px solid #007bff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    padding: 15px;
+    background-color: #e9f5ff;
+}
+
+.prefix-container h2 {
+    margin: 0;
+    color: #0056b3;
+}
+
+.route-item {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +72,7 @@ h1 {
 .route-details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .route-details strong {
@@ -65,28 +83,30 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-1px);
 }
 
 .response-container {
     background-color: #f8f9fa;
     border: 1px solid #ced4da;
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 10px;
-    white-space: pre-wrap; 
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    white-space: pre-wrap;
     overflow: auto;
+    display: none; /* Esconde a resposta inicialmente */
 }
 
 .close-button {
@@ -96,7 +116,7 @@ button:hover {
     border-radius: 5px;
     padding: 8px 12px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .close-button:hover {
@@ -113,4 +133,32 @@ button:hover {
 
 .route-item button i {
     font-size: 1.2em;
+}
+
+
+#rotasContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Aumente o espaçamento entre os cartões */
+}
+
+.prefix-container {
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #e9f5ff;
+    margin-bottom: 20px; /* Adicione uma margem inferior */
+}
+
+.route-item {
+    padding: 10px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px; /* Adicione uma margem inferior para separar os cartões */
 }
